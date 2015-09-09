@@ -76,5 +76,8 @@ Etsydemo::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+   # Required for Devise. Remember to change localhost:3000 to actual application host
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+end
 
 end
